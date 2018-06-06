@@ -43,10 +43,10 @@ DATASETS= {'pascal_voc': ('voc_2007_trainval',),'pascal_voc_0712': ('voc_2007_tr
 
 trans_dir = '/home/zerozone/Works/Competition/DC/trans/'
 
-test_dir = '/home/zerozone/Works/Competition/DC/trans/picture/test_a/'
+test_dir = '/home/zerozone/Works/Competition/DC/trans/picture/test_1/'
 train_dir = '/home/zerozone/Works/Competition/DC/trans/picture/train/'
 demo_dir = '/home/zerozone/Works/Faster_RCNN/tf-faster-rcnn/data/demo/'
-img_dir = demo_dir
+img_dir = test_dir
 temp_file = os.path.join(trans_dir, 'temp.csv')
 
 def vis_detections(im, class_name, dets, thresh=0.5):
@@ -125,7 +125,7 @@ def write_csv(image_name, dets, thresh=0.5):
     # fig, ax = plt.subplots(figsize=(12, 12))
     # ax.imshow(im, aspect='equal')
     box_list =[]
-    with open(temp_file,'x') as tempfile:
+    with open(temp_file,'a') as tempfile:
         tempfile.write(image_name+',')
         for i in inds:
             bbox = dets[i, :4]
@@ -194,6 +194,9 @@ if __name__ == '__main__':
         # print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         # print('Demo for data/demo/{}'.format(im_name))
         # demo(sess, net, im_name)
+    with open(temp_file,'x') as tempfile:
+        tempfile.write('name,coordinate\n')
+
     for im_name in os.listdir(img_dir):
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Demo for {}{}'.format(img_dir, im_name))
