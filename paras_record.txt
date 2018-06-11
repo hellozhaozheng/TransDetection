@@ -1,4 +1,4 @@
-PC  模型  训练集样本数	候选区域数  其他参数
-gm  res101  10602  300  default
-zz  res101  10602  350  default
-fc  res101  10602  400  default
+PC  模型  训练集样本数  候选区域数 stepsize  iters    其他参数
+gm  res101  10602 300 default 
+zz  res101  10602 350 default 70000
+fc  res101  10602 400 default
