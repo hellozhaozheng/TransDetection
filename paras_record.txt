@@ -1,4 +1,4 @@
 PC   模型     训练集样本数   候选区域数 stepsize  iters  IMDB  其他参数              最终分数    模型日期
-gm   res101   10602   300                                          default     0.87063
+gm   res101   10602   300                                          default     
 zz   res101   10602   350   80000   120000   voc_2018_trainval_2   default     0.86910    6.12 7：54
-fc   res101   10602   400                                          default
+fc   res101   10602   400   70000   100000                         default     0.87063    6.12 6：25
