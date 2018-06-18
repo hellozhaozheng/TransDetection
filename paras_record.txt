@@ -23,7 +23,14 @@ gm  res152  10602  500  80000  120000  [4,8,16,32]  flipped    default          
 fc  res152  10602  550  80000  120000  [4,8,16,32]  flipped    default          0.884357    6.15       iter_106000.ckpt
 fc  res152  10602  550  80000  120000  [4,8,16,32]  flipped    default          0.884566    6.15       iter_116000.ckpt
 
++b:gm  res152  10602  500  80000  120000  [4,8,16,32]  flipped    default       0.891284    6.18     iter_140000.ckpt 
++b:fc  res152  10602  550  80000  120000  [4,8,16,32]  flipped    default       0.890592    6.18     iter_132000.ckpt 
+
 
 
 gm  res152  10602  500  80000  120000  [4,8,16,32]  flipped  lr=0.0001 size=(600,1000)  default  0.86××
 gm  res152  10602  550  80000  120000  [4,8,16,32]  flipped  lr=0.0001 size=(500,1070)  default  0.86××
+
+
+gm  res152  10602  500  100000  140000  [4,8,16,32]    [0.3,...,3]  flipped    default             
+fc  res152  10602  500  100000  140000  [4,8,16,32,64] [0.3,...,3]  flipped    default            
